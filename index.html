@@ -6,167 +6,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
     <nav>
         <img src="assets/logo.png" alt="logo">
-        <ul class="sidemenu">
-            <li><a href="index.html#Home">Home</a></li>
-            <li><a href="index.html#About">About</a></li>
-            <li><a href="index.html#Concerts">Concerts</a></li>
-            <li><a href="index.html#Video">Video</a></li>
-            <li><a href="index.html#Photos">Photos</a></li>
-            <li><a href="index.html#Contact">Contact</a></li>
+        <ul class="menu-nav">
+            <li class="menu-item">
+                <a href="#Home">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="#About">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="#Concerts">Concerts</a>
+            </li>
+            <li class="menu-item">
+                <a href="#Video">Video</a>
+            </li>
+            <li class="menu-item">
+                <a href="#Photos">Photos</a>
+            </li>
+            <li class="menu-item">
+                <a href="#Contact">Contact</a>
+            </li>
         </ul>
-        <ul class="iconlinks">
+    </nav>
+    <main>
+        <div class="container">
+            <section id="Home">
+                <h2>Home</h2>
+                <ul class="band-members">
+                    <li class="band-members__item">
+                        <img class="band-members__image" src="./assets/band-member01.png" alt="Image of stylized keyboard player's face" />
+                        <p class="band-members__name">Kamil Zgondek</p>
+                        <p class="band-members__desc">Keyboard</p>
+                    </li>
+                    <li class="band-members__item">
+                        <img class="band-members__image" src="./assets/band-member02.png" alt="Image of stylized vocalist's face" />
+                        <p class="band-members__name">Łukasz Furman</p>
+                        <p class="band-members__desc">Vocals</p>
+                    </li>
+                    <li class="band-members__item">
+                        <img class="band-members__image" src="./assets/band-member03.png" alt="Image of stylized drummer's face" />
+                        <p class="band-members__name">Kamil Majewski</p>
+                        <p class="band-members__desc">Drums</p>
+                    </li>
+                    <li class="band-members__item">
+                        <img class="band-members__image" src="./assets/band-member04.png" alt="Image of stylized bassist's face" />
+                        <p class="band-members__name">Daniel Cajzer</p>
+                        <p class="band-members__desc">Bass guitar</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <article id="About">
+                <h2>About</h2>
+                <img src="assets/band01.jpg" alt="Band Photo">
+                <section id="description">
+                    <h3>Straight From Lublin</h3>
+                    <p>6BM is a young band which has its origins in the city of Lublin, playing music described as
+                        electro-rock. Band members aim to convey emotions, reflexion but also hope. </p>
+                    <p>They are inspired by various genres, like: alternative rock, nu-metal, synthwave or even
+                        drum'n'bass. As for now, they released their debut EP -TRINITY and they started working on
+                        their
+                        first full-length album.
+                    </p>
+                </section>
+            </article>
+        </div>
+        <div class="container">
+            <section id="Concerts">
+                <h2>Concerts</h2>
+                <div class="concerts">
+                    <div class="concert_item">
+                        <figure>
+                            <img src="assets/band02_WiechnikMarcin.jpg" width="300px" height="200px" alt="Concert in Lublin Photo">
+                            <figcaption>
+                                <p>20.12.2018</p>
+                                <p>Lublin, klub XXX</p>
+                                <button type="button">Buy Ticket</button>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="concert_item">
+                        <figure>
+                            <img src="assets/band03_WiechnikMarcin.jpg" width="300px" height="200px" alt="Concert in Warsaw Photo">
+                            <figcaption>
+                                <p>20.12.2018</p>
+                                <p>Warszawa, klub YYY</p>
+                                <button type="button">Buy Ticket</button>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="concert_item">
+                        <figure>
+                            <img src="assets/band04_JakubBodys.jpg" width="300px" height="200px" alt="Concert in Krakow Photo">
+                            <figcaption>
+                                <p>20.12.2018</p>
+                                <p>Kraków, klub ZZZ</p>
+                                <button type="button">Buy Ticket</button>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="concert_item">
+                        <figure>
+                            <img src="assets/band05_JakubBodys.jpg" width="300px" height="200px" alt="Concert in Poznan Photo">
+                            <figcaption>
+                                <p>20.12.2018</p>
+                                <p>Poznan, klub AAA</p>
+                                <button type="button">Buy Ticket</button>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container">
+            <section id="Video">
+                <h2>Video</h2>
+                <div class="VideoContainer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AstRXh-vKNI" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+            <div class="container">
+                <section id="Photos">
+                    <h2>Photos</h2>
+                    <ul class="gallery">
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band05_JakubBodys.jpg" alt="Image of band vocalist during a concert" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band06_JakubBodys.jpg" alt="Image of band drummer during a concert" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band07.jpg" alt="Image of band members at the construction site" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band08.jpg" alt="Image of band members posing against the wall with graffiti" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band09.jpg" alt="Image of band members standing in the shadows" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band10.jpg" alt="Image of band members standing at the construction site" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band11.jpg" alt="Image of band vocalist during a concert" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band04_JakubBodys.jpg" alt="Image of band keyboard player during a concert" />
+                        </li>
+                        <li class="gallery__item">
+                            <img class="gallery__image" src="./assets/band03_WiechnikMarcin.jpg" alt="Image of band vocalist and keyboard player during a concert" />
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="container">
+                <section id="Contact">
+                    <h2 class="content-section__header">Contact</h2>
+                    <img class="gallery__image" src="./assets/band12.jpg" alt="Image of band members posing next to a train" />
+                    <address>
+                        Tel: 123 456 789<br />
+                        E-mail: 6bmmusic@gmail.com
+                    </address>
+                    <form class="form">
+                        <div class="form__field">
+                            <label class="form__label" for="email">E-mail</label>
+                            <input class="form__input" type="email" name="email" id="email" required />
+                        </div>
+                        <div class="form__field">
+                            <label class="form__label" for="topic">Topic</label>
+                            <input class="form__input" type="text" name="topic" id="topic" required />
+                        </div>
+                        <div class="form__field">
+                            <button class="button" type="submit">Contact us!</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+    </main>
+    <footer>
+        <ul class="social-links">
             <li><img src="assets/fb.svg" alt="Facebook logo"></li>
             <li><img src="assets/insta.svg" alt="Instagram logo"></li>
             <li><img src="assets/last.svg" alt="logo"></li>
             <li><img src="assets/yout.svg" alt="Youtube logo"></li>
         </ul>
-    </nav>
-    <main>
-        <section id="Home">
-            <figure>
-                <img src="assets/band-member01.png" alt="Kamil Zgondek Photo">
-                <figcaption>
-                    <br><strong>Kamil Zgondek</strong>
-                    <br>Keyboard
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/band-member02.png" alt="Łukasz Furman Photo">
-                <figcaption>
-                    <br><strong>Łukasz Furman</strong>
-                    <br>Vocals
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/band-member03.png" alt="Kamil Majewski Photo">
-                <figcaption>
-                    <br><strong>Kamil Majewski</strong>
-                    <br>Drums
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/band-member04.png" alt="Daniel Cajzer Photo">
-                <figcaption>
-                    <br><strong>Daniel Cajzer</strong>
-                    <br>Bass Guitar
-                </figcaption>
-            </figure>
-        </section>
-
-        <article id="About">
-            <h2>About</h2>
-            <img src="assets/band01.jpg" alt="Band Photo">
-            <section id="description">
-                <h3>Straight From Lublin</h3>
-                <p>6BM is a young band which has its origins in the city of Lublin, playing music described as
-                    electro-rock. Band members aim to convey emotions, reflexion but also hope. </p>
-                <p>They are inspired by various genres, like: alternative rock, nu-metal, synthwave or even
-                    drum'n'bass. As for now, they released their debut EP -TRINITY and they started working on their
-                    first full-length album.
-                </p>
-            </section>
-        </article>
-
-        <article id="Concerts">
-            <h2>Concerts</h2>
-            <figure>
-                <img src="assets/band02_WiechnikMarcin.jpg" width="300px" height="200px" alt="Concert in Lublin Photo">
-                <figcaption>
-                    <br><strong>20.12.2018</strong>
-                    <br>Lublin, klub XXX
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/band03_WiechnikMarcin.jpg" width="300px" height="200px" alt="Concert in Warsaw Photo">
-                <figcaption>
-                    <br><strong>20.12.2018</strong>
-                    <br>Warszawa, klub YYY
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/band04_JakubBodys.jpg" width="300px" height="200px" alt="Concert in Krakow Photo">
-                <figcaption>
-                    <br><strong>20.12.2018</strong>
-                    <br>Kraków, klub ZZZ
-                    <button type="button">Buy Ticket</button>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/band05_JakubBodys.jpg" width="300px" height="200px" alt="Concert in Poznan Photo">
-                <figcaption>
-                    <br><strong>20.12.2018</strong>
-                    <br>Poznan, klub AAA
-                    <button type="button">Buy Ticket</button>
-                </figcaption>
-            </figure>
-        </article>
-        <article id="Video">
-            <h2>Video</h2>
-            <div class="VideoContainer">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/AstRXh-vKNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </article>
-        <article id="Photos">
-            <h2>Photos</h2>
-            <table class="Galery">
-                <tr>
-                    <td>
-                        <img src="assets/band04_JakubBodys.jpg" width="300px" height="200px" alt="Image 1">
-                    </td>
-                    <td>
-                        <img src="assets/band05_JakubBodys.jpg" width="300px" height="200px" alt="Image 2">
-                    </td>
-                    <td>
-                        <img src="assets/band06_JakubBodys.jpg" width="300px" height="200px" alt="Image 3">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="assets/band02_WiechnikMarcin.jpg" width="300px" height="200px" alt="Image 4">
-                    </td>
-                    <td>
-                        <img src="assets/band03_WiechnikMarcin.jpg" width="300px" height="200px" alt="Image 5">
-                    </td>
-                    <td>
-                        <img src="assets/band07.jpg" width="300px" height="200px" alt="Image 6">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="assets/band08.jpg" width="300px" height="200px" alt="Image 7">
-                    </td>
-                    <td>
-                        <img src="assets/band09.jpg" width="300px" height="200px" alt="Image 8">
-                    </td>
-                    <td>
-                        <img src="assets/band10.jpg" width="300px" height="200px" alt="Image 9">
-                    </td>
-                </tr>
-            </table>
-        </article>
-        <article id="Contact">
-            <h2>Contacts</h2>
-            <img src="assets/band12.jpg" width="600px" height="400px" alt="Band Photo">
-            <aside>
-                <p>Tel: 000 000 000 00
-                    <br>Email: sadadsadas@gmail.com</p>
-            </aside>
-            <form action="Formularz.html" method="GET">
-                <label for="pole1">Email:</label>
-                <br><input id="pole1" type="text" name="emailfield"><br>
-                <label for="pole2">Topic:</label>
-                <br><input id="pole2" type="text" name="emailfield"><br>
-                <input type="submit" value="Contact Us">
-            </form>
-        </article>
-    </main>
-
+    </footer>
 </body>
 
 </html>
