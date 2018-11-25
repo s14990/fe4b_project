@@ -1,0 +1,360 @@
+/*
+ul{
+    list-style: none;
+}
+nav{
+    position: fixed;
+    background: red;
+    width: 150px;
+    top: 5px;
+    left: 5px;
+}
+ul.social-links{
+    position: fixed;
+    background: rgb(255, 150, 150);
+    width: 150px;
+    bottom: 5px;
+    left: 5px;   
+}
+
+main{
+    height: 100%;
+    margin-left: 200px;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: stretch;
+}
+div.container{
+    min-height: 100vh;
+    border: 3px solid blue;
+}
+div.concerts{
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media all and (min-width: 1200px){
+ul.gallery{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-column-gap:10px;
+}
+img.gallery__image{
+    max-width:80%;
+    max-height: auto;
+    }
+}
+
+@media all and (max-width: 1199px){
+    ul.gallery{
+        list-style-type: none;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    img.gallery__image{
+        max-width:80%;
+        max-height: auto;
+    }
+}
+
+ul.band-members{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+*/
+/*
+Przeglądarki internetowe nadają znacznikom HTML wartości początkowe,
+które się różnią w zależności od producenta (np. Chrome, Firefox, Opera, Internet Explorer, Microsoft Edge).
+Dlatego popularną praktyką jest tworzenie tzw. resetów, 
+czyli plików CSS zawierających reguły, które nadpisują te wartości, 
+aby były one jednolite niezalenie od przeglądarki.
+Więcej na ten temat: https://cssreset.com/what-is-a-css-reset/
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url('./images/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+   
+}
+main{
+    background-image: url('./images/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-family: 'OpenSans',Courier, monospace;
+}
+h2{
+    font-family: 'OpenSans',Courier, monospace;
+    font-weight: bold;
+    size: 28px;
+    letter-spacing: 3.5;
+    color:#ec008c;
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #ec008c;
+}
+
+.screen-reader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.page-footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 6.7px;
+    color: #ec008c;
+}
+.social-links__item:hover{
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 6.5px;
+}
+.social-links__item:active{
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 6.7px;
+}
+
+
+.page-header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 6.7px;
+    color: #ec008c;
+}
+.page-navitagion__item:hover{
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 6.5px;
+}
+.page-navitagion__item:active{
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 6.7px;
+}
+
+.content-section {
+    min-height: 100vh;
+    overflow: hidden;
+}
+.content-section__header{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ec008c;
+}
+#home{
+    display: flex;
+    align-items: center;
+}
+.band-members__item{
+    opacity: 0.3;
+    color: rgba(204, 200, 255, 0%);
+}
+.band-members__item:hover{
+    opacity: 1;
+    color: rgba(204, 200, 255, 80%);
+}
+.band-members__name{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+}
+.band-members__desc{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+img.about-section__image{
+    height: 70%;
+    width: auto;
+    position:relative;
+    top: 30px;
+    left: 100px;
+    bottom: 50px;
+    border-top: 3px solid #ec008c;
+}
+.about-section__desc{
+    background: rgb(37, 7, 46);
+    width: 400px;
+    height: 300px;
+    bottom: 200px;
+    padding: 30px;
+    margin: 30px;
+    position: relative;
+    border-bottom: 3px solid #ec008c;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: rgba(204, 200, 255, 80%);
+    line-height: 15px;
+}
+.concerts{
+    margin-left: 10%; 
+    width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+}
+.concerts__item{
+    margin: 20px;
+    flex-basis: 40%;
+    
+}
+img.concerts__image{
+    width: 400px;
+    height: auto;
+}
+.concerts__date{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    color: rgba(204, 200, 255, 80%);
+    text-align: left;
+}
+.concerts__location{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: rgba(204, 200, 255, 50%);
+}
+.button{
+    float: right;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(219, 216, 251);
+    color: rgb(37, 7, 46);
+    position: relative;
+    bottom: 20px;
+    border: none;
+    text-decoration: none;
+    
+}
+
+.gallery{
+    width: 100%;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.gallery__item{
+    margin: 5px;
+    flex-basis: 30%;
+}
+.gallery__image{
+    width: 300px;
+    height: auto;
+    border-top:3px solid #ec008c;
+}
+.contact__container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px;
+}
+.form__image{
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+}
+address{
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: rgba(204, 200, 255, 50%);
+}
+.form{
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    justify-self: start;
+}
+
+.form__label{
+    margin: 10px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: rgba(204, 200, 255, 50%);
+    display: block;
+}
+.form__input{
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    background-color: rgba(204, 200, 255, 80%);
+}
+.form__button{
+    height: 20px;
+    width: 100px;
+    background-color: rgb(219, 216, 251);
+    color: rgb(37, 7, 46);
+    border: none;
+    float: left;
+    margin: 10px;
+}
+.page-footer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+.page-content {
+    margin-left: 220px;
+    padding: 0 10%;
+    text-align: right;
+}
+.band-members{
+    display: flex;
+    flex-flow: row nowrap;
+}
+iframe{
+    border-top:3px solid #ec008c;
+}
