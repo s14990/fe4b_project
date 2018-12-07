@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    transition-timing-function: ease;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
     background-attachment: fixed;
 }
 
-
 h1, h2, h3 {
     margin: 0;
 }
@@ -22,6 +22,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 
 .screen-reader-only {
     position: absolute;
@@ -44,6 +45,8 @@ a {
     color: #EF008E;
     text-decoration: none;
 }
+
+
 
 .button {
     padding: 7px 15px;
@@ -78,6 +81,12 @@ a {
     background-color: rgba(219, 216, 251, 0.1);
 }
 
+@media screen and ( max-width: 1024px ) {
+    .form__input {
+        width: 100%;
+    }
+}
+
 .page-header {
     position: fixed;
     top: 50px;
@@ -95,18 +104,46 @@ a {
     padding: 0 10%;
 }
 
+@media screen and ( max-width: 1280px ) {
+    .page-header {
+        position: static;
+        padding: 30px 0;
+        text-align: center;
+    }
+    .page-content {
+        margin-left: 0;
+    }
+
+    .page-footer {
+        position: static;
+    }
+}
+
 
 .page-navigation__items {
     padding-top: 15px;
 }
 
-.page-navitagion__item a {
+.page-navigation__item:hover {
+    opacity: 1.0;
+}
+
+.page-navigation__item a {
     color: rgba(239, 0, 142, 0.6);
     line-height: 30px;
     text-transform: uppercase;
     letter-spacing: 6.7px;
 }
 
+@media screen and ( min-width: 1025px ) and ( max-width: 1280px ) {
+    .page-navigation__item {
+        display: inline-block;
+    }
+
+    .page-navigation__item {
+        margin: 0 20px;
+    }
+}
 
 
 .social-links__item + .social-links__item {
@@ -118,12 +155,35 @@ a {
     height: 20px;
 }
 
+@media screen and ( max-width: 1280px ) {
+    .social-links {
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .social-links__item {
+        display: inline-block;
+    }
+
+    .social-links__item + .social-links__item {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+}
+
 .content-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     min-height: 100vh;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .content-section {
+        min-height: 0;
+        padding-bottom: 100px;
+    }
 }
 
 .content-section__header {
@@ -139,19 +199,79 @@ a {
     flex-grow: 1;
 }
 
+
 .content-section.home-section {
     align-items: center;
 }
 
 .band-members {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     align-items: center;
+    
+}
+
+.band-members__item{
+    opacity: 0.3;
+}
+.band-members__item:hover {
+    opacity: 1.0;
+    transform: scale(1.05);
+    transition: 0.2s;
+    display: static;
 }
 
 .band-members__name,
 .band-members__desc {
-    display: none;
+    visibility: hidden;
+    /*display: none;*/
+    margin: 0;
+}
+
+.band-members__item:hover .band-members__name{
+    visibility: visible;
+    display: static;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: rgb(219, 216, 251);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3.8px;
+    transition: 0.2s;
+}
+.band-members__item:hover .band-members__desc{
+    visibility: visible;
+    display: static;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(204, 200, 255, 50%);
+    letter-spacing: 3.8px;
+    transition: 0.2s;
+}
+
+
+
+@media screen and ( min-width: 1025px ) and ( max-width: 1280px ) {
+    .content-section.home-section {
+        justify-content: flex-start;
+        padding-top: 20vh;
+    }
+}
+
+@media screen and ( max-width: 1024px ) {
+    .band-members {
+        flex-direction: column;
+    }
+
+    .band-members__image {
+        margin: 50px 0 10px;
+    }
+
+    .band-members__name,
+    .band-members__desc {
+        display: block;
+        text-align: center;
+    }
 }
 
 .about {
@@ -182,6 +302,19 @@ a {
     background-color: #25072e;
     border-bottom: 3px solid #EF008E;
 }
+
+@media screen and ( max-width: 1024px ) {
+    .about {
+        margin: 0;
+    }
+
+    .about__desc {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
 
 .concerts {
     display: flex;
@@ -225,8 +358,26 @@ a {
     letter-spacing: 3.8px;
 }
 
+@media screen and ( max-width: 1024px ) {
+    .concerts {
+        display: block;
+        width: auto;
+    }
+
+    .concerts__item {
+        padding-left: 0;
+    }
+}
+
+
 .embedded-video {
     border-top: 3px solid #EF008E;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .embedded-video {
+        max-width: 100%;
+    }
 }
 
 
@@ -241,12 +392,25 @@ a {
     flex-basis: 33.3%;
     padding: 0 0 20px 20px;
 }
+.gallery__item:hover {
+    transform: scale(1.1);
+}
 
 .gallery__image {
     max-width: 100%;
     border-top: 3px solid #EF008E;
 }
 
+@media screen and ( max-width: 1024px ) {
+    .gallery {
+        display: block;
+        width: auto;
+    }
+
+    .gallery__item {
+        padding-left: 0;
+    }
+}
 
 .contact {
     display: flex;
@@ -273,191 +437,16 @@ a {
     margin-top: 20px;
 }
 
-/*Smartphones*/
-
-@media (max-width: 599px) {
-
-    .content-section{
-        min-height: 50vh;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-        min-width: 300px;
-    }
-    .page-content {
-        margin-left: 0px;
-        padding: 30px;
-    }
-
-    .page-header {
-        position: static;
+@media screen and ( max-width: 1024px ) {
+    .contact {
         display: block;
-        margin-bottom: 50px;
-        text-align: center;
-        min-width: 200px;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center; 
     }
 
-    .page-footer {
-        position: static;
-        
-    }
-
-    .social-links{
-       display :block;
-       width: 100%;
-       display: flex;
-       flex-flow: row nowrap; 
-       justify-content: space-around;
-    }
-
-
-
-    .band-members {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-    }
-    .band-members__item{
-        flex-basis: 80%;
-        min-width: 200px;
-    }
-
-    .about {
-        position: static;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-content: center;
-        min-width: 300px; 
-        margin: 0px;
-    }
-    .about__desc{
-    left: 0px;
-    bottom: 0px;
-    padding: 30px;
-    position: static;
-    width:100%;
-    }
-
-    
-    .page-footer {
-        position: static;
-        bottom: 50px;
-        left: 50px;
-    }
-
-    .concerts {
-        justify-content: center;
-        width: 100%;
-    }
-    .concerts__item{
-        flex-basis: 100%;
-        padding: 30px;
-    }
-
-    .embedded-video{
-        width: 100%;
-    }
-
-    .gallery{
-        width: 100%;
-    }
-
-    .gallery__item {
-        flex-basis:50%;
-        padding: 5px;
-    }
-    
-    .contact__image img {
-        max-width: 100%;
-    }
-    
     .contact__address {
-        padding: 30px;
-        font-style: normal;
+        padding: 30px 0 0;
     }
-    
+
     .contact__form {
-        flex-basis: 50%;
-        padding-top: 10px;
+        padding-top: 30px;
     }
-    
-    .contact__form .button {
-        margin-top: 20px;
-    }
-
-    .social-links__item + .social-links__item {
-        margin-top: 0px;
-    }
-    
-    .social-links__item img {
-        width: 30px;
-        height: 30px;
-    }
-
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-    .content-section{
-        min-height: 100vh;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-content: center;
-    }
-    .page-content {
-        margin-left: 200px;
-        padding: 30px;
-    }
-
-    .band-members {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-    }
-    .band-members__item{
-        flex-basis: 80%;
-        width: 50%;
-    }
-
-    .about {
-        position: static;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-content: center;
-        min-width: 300px; 
-        margin: 0px;
-    }
-    .about__desc{
-    left: 0px;
-    bottom: 0px;
-    padding: 30px;
-    position: static;
-    width:100%;
-    }
-
-    .concerts__item {
-        flex-basis: 50%;
-        padding: 10px;
-    }
-
-    .embedded-video{
-        width: 100%;
-    }
-
-    .gallery{
-        width: 100%;
-    }
-
-    .gallery__item {
-        flex-basis:33.3%;
-        padding: 10px;
-    }
-
-
-    
-  
 }
