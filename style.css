@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    transition-timing-function: ease;
 }
 
 body {
@@ -39,6 +38,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     font-weight: normal;
+    transition-timing-function: ease;
 }
 
 a {
@@ -59,6 +59,17 @@ a {
     text-transform: uppercase;
     letter-spacing: 1.6px;
     cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgba(204, 200, 255, 0.6);
+}
+
+.button:active{
+    transform: scale(0.9);
+}
+.button:focus{
+    background-color: rgba(204, 200, 255, 0.3);
 }
 
 
@@ -120,20 +131,27 @@ a {
 }
 
 
-.page-navigation__items {
+.page-navigation__items{
     padding-top: 15px;
-}
-
-.page-navigation__item:hover {
-    opacity: 1.0;
-}
-
-.page-navigation__item a {
-    color: rgba(239, 0, 142, 0.6);
-    line-height: 30px;
+    font-family:Helvetica, Arial, sans-serif;
+    letter-spacing: 6.5px;
+    color: rgba(204, 200, 255, 0.8);
     text-transform: uppercase;
-    letter-spacing: 6.7px;
 }
+
+
+/*.page-navigation__item*/ a:hover{
+    color: rgb(219, 216, 251);
+    letter-spacing: 6.7px;
+    transition: 0.1s;
+}
+/*.page-navigation__item*/ a:active{
+    color: #EF008E;
+    letter-spacing: 6.2px;
+    transition: 0.1s;
+}
+
+
 
 @media screen and ( min-width: 1025px ) and ( max-width: 1280px ) {
     .page-navigation__item {
@@ -226,27 +244,24 @@ a {
     visibility: hidden;
     /*display: none;*/
     margin: 0;
-}
-
-.band-members__item:hover .band-members__name{
-    visibility: visible;
-    display: static;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: rgb(219, 216, 251);
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 3.8px;
-    transition: 0.2s;
-}
-.band-members__item:hover .band-members__desc{
-    visibility: visible;
-    display: static;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     color: rgba(204, 200, 255, 50%);
     letter-spacing: 3.8px;
     transition: 0.2s;
+}
+
+.band-members__item:hover .band-members__name{
+    visibility: visible;
+    display: static;
+    font-size: 15px;
+    color: rgb(219, 216, 251);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.band-members__item:hover .band-members__desc{
+    visibility: visible;
+    display: static;
 }
 
 
@@ -391,6 +406,7 @@ a {
 .gallery__item {
     flex-basis: 33.3%;
     padding: 0 0 20px 20px;
+    transition: 0.2s;
 }
 .gallery__item:hover {
     transform: scale(1.1);
